@@ -1,0 +1,130 @@
+<div class="container py-4">
+   <div class="row justify-content-center">
+      <div class="col-lg-8">
+         <div class="card shadow-sm form-container">
+            <div class="card-header bg-warning text-dark p-3">
+               <h2 class="mb-0 text-center fw-bold">
+                  <i class="fas fa-edit me-2"></i>Edit Toy
+               </h2>
+            </div>
+            
+            <div class="card-body p-4">
+               <form action="/toy/edit/{{toy._id}}" method="post">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group mb-3">
+                           <label for="name" class="form-label">
+                              <i class="fas fa-cube me-1"></i>Toy Name <span class="text-danger">*</span>
+                           </label>
+                           <input 
+                              id="name"
+                              class="form-control" 
+                              type="text" 
+                              name="name"
+                              value="{{toy.name}}"
+                              minlength="3" 
+                              maxlength="50"
+                              required
+                           >
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                           <label for="brand" class="form-label">
+                              <i class="fas fa-industry me-1"></i>Brand <span class="text-danger">*</span>
+                           </label>
+                           <input 
+                              id="brand"
+                              class="form-control" 
+                              type="text" 
+                              name="brand" 
+                              value="{{toy.brand}}"
+                              required
+                           >
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                           <label for="price" class="form-label">
+                              <i class="fas fa-tag me-1"></i>Toy Price ($) <span class="text-danger">*</span>
+                           </label>
+                           <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input 
+                                 id="price"
+                                 class="form-control" 
+                                 type="number" 
+                                 name="price" 
+                                 value="{{toy.price}}"
+                                 min="1" 
+                                 max="1000"
+                                 step="0.01"
+                                 required
+                              >
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-md-6">
+                        <div class="form-group mb-3">
+                           <label for="quantity" class="form-label">
+                              <i class="fas fa-boxes me-1"></i>Quantity <span class="text-danger">*</span>
+                           </label>
+                           <input 
+                              id="quantity"
+                              class="form-control" 
+                              type="number" 
+                              name="quantity" 
+                              value="{{toy.quantity}}"
+                              min="1" 
+                              max="500"
+                              required
+                           >
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                           <label for="image" class="form-label">
+                              <i class="fas fa-image me-1"></i>Toy Image <span class="text-danger">*</span>
+                           </label>
+                           <div class="mb-2">
+                              <img src="{{toy.image}}" class="img-thumbnail" style="height: 100px;" alt="Current image of {{toy.name}}">
+                           </div>
+                           <input 
+                              id="image"
+                              class="form-control" 
+                              type="url" 
+                              name="image" 
+                              value="{{toy.image}}"
+                              required
+                           >
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                           <label for="category" class="form-label">
+                              <i class="fas fa-folder me-1"></i>Category
+                           </label>
+                           <select id="category" class="form-select">
+                              <option value="" selected disabled>Select a category</option>
+                              <option value="stuffed">Stuffed Toys</option>
+                              <option value="educational">Educational Toys</option>
+                              <option value="action">Action Figures</option>
+                              <option value="puzzle">Puzzles</option>
+                              <option value="vehicle">Toy Vehicles</option>
+                              <option value="other">Other</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="form-group mt-4 d-flex justify-content-between">
+                     <a href="/toy/list" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-1"></i>Back to List
+                     </a>
+                     <button type="submit" class="btn btn-warning text-dark">
+                        <i class="fas fa-save me-1"></i>Update Toy
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>s

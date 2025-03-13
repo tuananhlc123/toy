@@ -1,0 +1,246 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden; /* Ngăn cuộn ngang */
+}
+
+/* Links */
+a {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+/* Layout styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .btn {
+  margin-right: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Toy List Page */
+.toy-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.toy-title {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.toy-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 8px 8px;
+}
+
+.toy-table th {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.toy-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.toy-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.toy-table tr:last-child td {
+  border-bottom: none;
+}
+
+.toy-price {
+  color: #198754;
+  font-weight: 500;
+}
+
+/* Toy Images */
+.toy-image {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.toy-image:hover {
+  transform: scale(1.05);
+}
+
+/* Toy Cards */
+.toy-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.toy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.toy-card .card-img-top {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.toy-card .card-body {
+  padding: 1.25rem;
+}
+
+.toy-card .card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.toy-card .card-text {
+  color: #64748b;
+}
+
+.toy-card .toy-price {
+  font-weight: 600;
+  color: #198754;
+  margin-top: 0.5rem;
+}
+
+/* Forms */
+.form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.form-title {
+  color: #0d6efd;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+  transform: translateY(-2px);
+}
+
+.btn-danger, 
+.btn-warning, 
+.btn-success {
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover,
+.btn-warning:hover,
+.btn-success:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .toy-image {
+    width: 60px;
+    height: 90px;
+  }
+
+  .toy-table th, 
+  .toy-table td {
+    padding: 0.75rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .toy-card .card-img-top {
+    height: 200px;
+  }
+}
