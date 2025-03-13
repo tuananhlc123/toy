@@ -16,7 +16,7 @@ bodyParser.urlencoded({ extended: false })
 //2. Connect MongoDB using "mongoose"
 var mongoose = require('mongoose')
 // Note: "toygame" is the database name
-var db= "mongodb://localhost:27017/toygame"
+var db= "mongodb+srv://anhktgch211377:thTf0JNXMXabavuF@cluster0.gf0g2.mongodb.net/toygame"
 mongoose.connect(db)
   .then(() => console.log('Database connection successful'))
   .catch((err) => console.error('Database connection error: ' + err))
